@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Sử Dụng AUTOFILL-KS-NTTU</title>
+    <style>
+        :root {
+            --ink: #243244;
+            --muted: #607080;
+            --line: #d8e0e8;
+            --accent: #1f7db8;
+            --accent-soft: #eaf5fb;
+            --warn: #fff6dc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f5f7fa;
+            color: #30363d;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 15.5px;
+            line-height: 1.6;
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 42px 34px 56px;
+            background: #fff;
+        }
+
+        header {
+            border-bottom: 3px solid var(--accent);
+            margin-bottom: 28px;
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            color: var(--ink);
+            font-size: 34px;
+            line-height: 1.18;
+            text-align: center;
+        }
+
+        .subtitle {
+            margin: 0;
+            color: var(--muted);
+            font-size: 17px;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 24px;
+            margin: 28px 0 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        h3 {
+            color: var(--ink);
+            font-size: 18px;
+            margin: 20px 0 8px;
+        }
+
+        p {
+            margin: 0 0 12px;
+        }
+
+        ol, ul {
+            margin: 8px 0 16px;
+            padding-left: 26px;
+        }
+
+        li {
+            margin: 4px 0;
+        }
+
+        code {
+            background: #f0f3f6;
+            border: 1px solid #e2e8ef;
+            border-radius: 4px;
+            color: #c0392b;
+            padding: 1px 5px;
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.95em;
+        }
+
+        .note {
+            background: var(--warn);
+            border-left: 4px solid #d6a321;
+            border-radius: 4px;
+            margin: 16px 0 22px;
+            padding: 12px 14px;
+        }
+
+        .tip {
+            background: var(--accent-soft);
+            border-left: 4px solid var(--accent);
+            border-radius: 4px;
+            margin: 18px 0;
+            padding: 12px 14px;
+        }
+
+        .checklist {
+            columns: 2;
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 12mm;
+            }
+
+            body {
+                background: #fff;
+            }
+
+            .page {
+                max-width: none;
+                padding: 24px 28px;
+            }
+
+            h2 {
+                break-after: avoid;
+            }
+
+            .note, .tip {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <header>
+            <h1>Hướng Dẫn Cài Đặt Và Sử Dụng AUTOFILL-KS-NTTU</h1>
+            <p class="subtitle">Tiện ích hỗ trợ điền phiếu đánh giá môn học/khảo sát bằng Side Panel</p>
+        </header>
+
+        <p>AUTOFILL-KS-NTTU là tiện ích Chromium hỗ trợ điền nhanh phiếu đánh giá môn học/khảo sát. Tiện ích dùng <strong>Side Panel</strong> để bảng điều khiển luôn nằm bên cạnh trang khảo sát, giúp bạn thao tác trên trang web mà không làm mất giao diện điều khiển.</p>
+
+        <div class="note">
+            <strong>Lưu ý:</strong> Tiện ích chỉ hỗ trợ điền biểu mẫu trên trình duyệt của bạn. Hãy kiểm tra lại nội dung trước khi gửi và sử dụng đúng quy định của hệ thống khảo sát.
+        </div>
+
+        <h2>1. Yêu Cầu Trước Khi Cài Đặt</h2>
+        <ul>
+            <li>Chrome, Microsoft Edge hoặc trình duyệt Chromium có hỗ trợ Manifest V3 và Side Panel.</li>
+            <li>Khuyến nghị Chrome 114 trở lên.</li>
+            <li>Mã nguồn tiện ích đã được tải hoặc clone về máy.</li>
+        </ul>
+
+        <h2>2. Cài Đặt Extension</h2>
+        <ol>
+            <li>Giải nén hoặc clone repository <code>AUTOFILL-KS-NTTU</code>.</li>
+            <li>Mở trình duyệt Chrome/Edge/Cốc Cốc.</li>
+            <li>Truy cập trang quản lý tiện ích: <code>chrome://extensions/</code> hoặc <code>edge://extensions/</code>.</li>
+            <li>Bật <strong>Developer mode</strong> hoặc <strong>Chế độ dành cho nhà phát triển</strong>.</li>
+            <li>Chọn <strong>Load unpacked</strong> hoặc <strong>Tải tiện ích đã giải nén</strong>.</li>
+            <li>Chọn thư mục chứa các file <code>manifest.json</code>, <code>popup.html</code>, <code>content.js</code> của dự án.</li>
+            <li>Kiểm tra tiện ích <strong>Auto Fill Khảo Sát</strong> đã xuất hiện trong danh sách.</li>
+        </ol>
+        <p>Nếu đã cài bản cũ, hãy bấm nút <strong>Reload</strong> trên thẻ tiện ích để cập nhật mã mới.</p>
+
+        <h2>3. Ghim Extension Lên Thanh Công Cụ</h2>
+        <ol>
+            <li>Bấm biểu tượng tiện ích của trình duyệt.</li>
+            <li>Tìm <strong>Auto Fill Khảo Sát</strong>.</li>
+            <li>Bấm biểu tượng ghim để đưa tiện ích lên thanh công cụ.</li>
+        </ol>
+
+        <h2>4. Mở Bảng Điều Khiển Side Panel</h2>
+        <ol>
+            <li>Mở trang khảo sát cần điền.</li>
+            <li>Bấm biểu tượng <strong>Auto Fill Khảo Sát</strong> trên thanh công cụ.</li>
+            <li>Bảng điều khiển sẽ mở ở cạnh bên trình duyệt.</li>
+        </ol>
+        <div class="tip">Side Panel có thể giữ nguyên khi bạn click, cuộn hoặc thao tác trên trang khảo sát.</div>
+
+        <h2>5. Cách Sử Dụng</h2>
+        <ol>
+            <li>Trong Side Panel, chọn <strong>Tùy chọn mức độ đánh giá</strong>.</li>
+            <li>Điền các thông tin nếu trang khảo sát có trường tương ứng: tên môn học, giảng viên, mã môn học, khoa, học kỳ và năm học.</li>
+            <li>Bấm <strong>Chạy Auto Fill</strong>.</li>
+            <li>Tiện ích sẽ tìm ô nhập liệu, nhập từng ký tự, chọn đáp án trắc nghiệm theo mức đánh giá đã chọn và điền <code>ok</code> vào các ô góp ý còn trống.</li>
+            <li>Khi hoàn tất, tiện ích sẽ báo để bạn kiểm tra lại.</li>
+            <li>Nếu trang có nút gửi với id <code>btnGui</code>, tiện ích sẽ hỏi xác nhận trước khi bấm gửi.</li>
+        </ol>
+
+        <h2>6. Các Mức Đánh Giá Được Hỗ Trợ</h2>
+        <ul class="checklist">
+            <li>Hoàn toàn đồng ý / Rất hài lòng</li>
+            <li>Đồng ý / Hài lòng</li>
+            <li>Phân vân / Bình thường</li>
+            <li>Không đồng ý / Không hài lòng</li>
+            <li>Hoàn toàn không đồng ý / Rất không hài lòng</li>
+        </ul>
+
+        <h2>7. Xử Lý Lỗi Thường Gặp</h2>
+        <h3>Không mở được Side Panel</h3>
+        <ul>
+            <li>Kiểm tra trình duyệt có hỗ trợ Side Panel hay không.</li>
+            <li>Cập nhật trình duyệt lên phiên bản mới.</li>
+            <li>Vào trang quản lý tiện ích và bấm <strong>Reload</strong>.</li>
+        </ul>
+
+        <h3>Bấm chạy nhưng không điền được</h3>
+        <ul>
+            <li>Đảm bảo bạn đang mở trang web dạng <code>http://</code> hoặc <code>https://</code>.</li>
+            <li>Không chạy trên trang quản lý nội bộ của trình duyệt như <code>chrome://extensions/</code>.</li>
+            <li>Kiểm tra trang khảo sát có cấu trúc nhãn và ô nhập liệu rõ ràng.</li>
+            <li>Tải lại trang khảo sát rồi chạy lại.</li>
+        </ul>
+
+        <h3>Chọn sai hoặc thiếu một số câu hỏi</h3>
+        <p>Một số trang khảo sát dùng cấu trúc HTML riêng, tên lớp khác hoặc nội dung đáp án khác. Hãy kiểm tra lại toàn bộ nội dung trước khi gửi.</p>
+
+        <h2>8. Quyền Riêng Tư</h2>
+        <ul>
+            <li>Tiện ích chạy trực tiếp trong trình duyệt.</li>
+            <li>Không có máy chủ riêng.</li>
+            <li>Không gửi dữ liệu người dùng về backend của dự án.</li>
+            <li>Quyền truy cập <code>&lt;all_urls&gt;</code> được dùng để tiện ích có thể chạy trên nhiều trang khảo sát khác nhau.</li>
+        </ul>
+
+        <h2>9. Gỡ Cài Đặt</h2>
+        <ol>
+            <li>Mở <code>chrome://extensions/</code> hoặc <code>edge://extensions/</code>.</li>
+            <li>Tìm <strong>Auto Fill Khảo Sát</strong>.</li>
+            <li>Bấm <strong>Remove</strong> hoặc <strong>Gỡ bỏ</strong>.</li>
+        </ol>
+    </main>
+</body>
+</html>
