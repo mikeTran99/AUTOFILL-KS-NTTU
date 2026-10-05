@@ -1,0 +1,722 @@
+{
+  "collectedAt": "2026-10-05T07:52:31.414Z",
+  "ownRuntimeBaseline": "1a8c9c0c2cded8a23e8567ff9a28aeaf517ea3c2",
+  "method": "GitHub REST metadata, HEAD commit, recursive tree and README, read only; source inspections are recorded in the report. No competitor runtime scores.",
+  "repositories": [
+    {
+      "repo": "mikeTran99/AUTOFILL-KS-NTTU",
+      "url": "https://github.com/mikeTran99/AUTOFILL-KS-NTTU",
+      "stars": 0,
+      "pushedAt": "2026-10-05T07:25:17Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": "MIT",
+      "topics": [
+        "chrome-extension",
+        "chromium-extension",
+        "nttu",
+        "side-panel",
+        "survey"
+      ],
+      "sha": "8ed9f0411858a3e907c0508d17bb5173ef212158",
+      "commitDate": "2026-07-02T07:41:56Z",
+      "treeTruncated": false,
+      "fileCount": 15,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/mikeTran99/AUTOFILL-KS-NTTU/blob/8ed9f0411858a3e907c0508d17bb5173ef212158/README.md",
+      "evidence": []
+    },
+    {
+      "repo": "muratalperen/GoogleFormsAutoFiller",
+      "url": "https://github.com/muratalperen/GoogleFormsAutoFiller",
+      "stars": 37,
+      "pushedAt": "2026-09-08T06:58:59Z",
+      "archived": false,
+      "defaultBranch": "master",
+      "license": "MIT",
+      "topics": [],
+      "sha": "bf94b96cb1e07e37ea0ca61416db437b417d7171",
+      "commitDate": "2026-09-08T06:49:21Z",
+      "treeTruncated": false,
+      "fileCount": 23,
+      "readme": "Readme.md",
+      "readmeUrl": "https://github.com/muratalperen/GoogleFormsAutoFiller/blob/bf94b96cb1e07e37ea0ca61416db437b417d7171/Readme.md",
+      "evidence": [
+        {
+          "path": "scripts/GoogleForm.js",
+          "url": "https://github.com/muratalperen/GoogleFormsAutoFiller/blob/bf94b96cb1e07e37ea0ca61416db437b417d7171/scripts/GoogleForm.js",
+          "sha256": "abd9d357461e844853797daccf7485df36cdb95227dc3808cdb109ae9a6d34ab",
+          "bytes": 10459,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        },
+        {
+          "path": "test/core.test.js",
+          "url": "https://github.com/muratalperen/GoogleFormsAutoFiller/blob/bf94b96cb1e07e37ea0ca61416db437b417d7171/test/core.test.js",
+          "sha256": "f9cf9bb767600e85f549ccd07c12541e02c834de36a9c3151238729116baa02d",
+          "bytes": 5044,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        },
+        {
+          "path": "manifest.json",
+          "url": "https://github.com/muratalperen/GoogleFormsAutoFiller/blob/bf94b96cb1e07e37ea0ca61416db437b417d7171/manifest.json",
+          "sha256": "d761a1b7a3a16498309edef01dacc9f27326d5728b005df1e8b0170bb2c993eb",
+          "bytes": 1147,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "holyjak/Testofill-chrome-extension",
+      "url": "https://github.com/holyjak/Testofill-chrome-extension",
+      "stars": 23,
+      "pushedAt": "2024-06-22T15:35:46Z",
+      "archived": false,
+      "defaultBranch": "master",
+      "license": "EPL-2.0",
+      "topics": [],
+      "sha": "8051a48eb6b185e15fa14bb850aec1ffc3ea7c1b",
+      "commitDate": "2024-06-22T15:35:41Z",
+      "treeTruncated": false,
+      "fileCount": 55,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/holyjak/Testofill-chrome-extension/blob/8051a48eb6b185e15fa14bb850aec1ffc3ea7c1b/README.md",
+      "evidence": [
+        {
+          "path": "src/extension/content/testofill-run.js",
+          "url": "https://github.com/holyjak/Testofill-chrome-extension/blob/8051a48eb6b185e15fa14bb850aec1ffc3ea7c1b/src/extension/content/testofill-run.js",
+          "sha256": "05e0bbd57666fe4900217cbba8c85d23bc42d35aa58460e25c242d40d7a7f834",
+          "bytes": 10501,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        },
+        {
+          "path": "src/extension/content/generative.js",
+          "url": "https://github.com/holyjak/Testofill-chrome-extension/blob/8051a48eb6b185e15fa14bb850aec1ffc3ea7c1b/src/extension/content/generative.js",
+          "sha256": "8665ab326458e0b8b5476f3b503052d011c53a1ae7dbc44f81a3f277a90f9a52",
+          "bytes": 2569,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "ronedata/form-filler-extension",
+      "url": "https://github.com/ronedata/form-filler-extension",
+      "stars": 0,
+      "pushedAt": "2026-09-21T07:29:29Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": null,
+      "topics": [],
+      "sha": "f96d8e81e96f9ae1a26eca67ff382c09e9177f2f",
+      "commitDate": "2026-09-21T07:28:04Z",
+      "treeTruncated": false,
+      "fileCount": 30,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/ronedata/form-filler-extension/blob/f96d8e81e96f9ae1a26eca67ff382c09e9177f2f/README.md",
+      "evidence": [
+        {
+          "path": "src/content/filler.js",
+          "url": "https://github.com/ronedata/form-filler-extension/blob/f96d8e81e96f9ae1a26eca67ff382c09e9177f2f/src/content/filler.js",
+          "sha256": "226a4cae196aa889cd2a1cd04366f38cca70db9fb259bbb97252f56ef9692e87",
+          "bytes": 40082,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        },
+        {
+          "path": "src/common/formmap.js",
+          "url": "https://github.com/ronedata/form-filler-extension/blob/f96d8e81e96f9ae1a26eca67ff382c09e9177f2f/src/common/formmap.js",
+          "sha256": "f72507b9d83a520eb332cb06617e5fecd38ad167b1d8fedd92bb64dfed76623f",
+          "bytes": 13686,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "Nir-Bhay/google-forms-autofill-extension",
+      "url": "https://github.com/Nir-Bhay/google-forms-autofill-extension",
+      "stars": 6,
+      "pushedAt": "2026-01-23T16:24:42Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": "MIT",
+      "topics": [
+        "autofill",
+        "automation",
+        "browser-extension",
+        "chrome-extension",
+        "css3",
+        "extension",
+        "form-automation",
+        "form-filler",
+        "google-form",
+        "javascript",
+        "manifest-v3",
+        "productivity-tools",
+        "profile-management"
+      ],
+      "sha": "764eed8055efb7fc6bfc098b57a2b041344445c3",
+      "commitDate": "2026-01-23T16:24:42Z",
+      "treeTruncated": false,
+      "fileCount": 16,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/Nir-Bhay/google-forms-autofill-extension/blob/764eed8055efb7fc6bfc098b57a2b041344445c3/README.md",
+      "evidence": [
+        {
+          "path": "content.js",
+          "url": "https://github.com/Nir-Bhay/google-forms-autofill-extension/blob/764eed8055efb7fc6bfc098b57a2b041344445c3/content.js",
+          "sha256": "37800be29fff033f65635eb404e0d84cce016197de0646f92c3bd4dcaf26c112",
+          "bytes": 78480,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "kiron0/fillo",
+      "url": "https://github.com/kiron0/fillo",
+      "stars": 0,
+      "pushedAt": "2026-04-09T13:56:08Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": "MIT",
+      "topics": [
+        "auto-fill",
+        "auto-save-form",
+        "chrome",
+        "chrome-extension",
+        "fill-form",
+        "form-autofill",
+        "form-filler",
+        "google-forms",
+        "manifest-v3",
+        "presets",
+        "productivity",
+        "profiles"
+      ],
+      "sha": "8ad3b7f54e16670767f0a54a3224ebc6f18c5ab5",
+      "commitDate": "2026-04-08T12:16:22Z",
+      "treeTruncated": false,
+      "fileCount": 45,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/kiron0/fillo/blob/8ad3b7f54e16670767f0a54a3224ebc6f18c5ab5/README.md",
+      "evidence": [
+        {
+          "path": "src/features/content/form-dom.ts",
+          "url": "https://github.com/kiron0/fillo/blob/8ad3b7f54e16670767f0a54a3224ebc6f18c5ab5/src/features/content/form-dom.ts",
+          "sha256": "5e273dbd116e066b68e917c7ba1b39772492ebccf93bdd6bacd8107f5ebf9b21",
+          "bytes": 71911,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        },
+        {
+          "path": "src/core/matching.ts",
+          "url": "https://github.com/kiron0/fillo/blob/8ad3b7f54e16670767f0a54a3224ebc6f18c5ab5/src/core/matching.ts",
+          "sha256": "2b038bbed71688b7573bdff8e6e2bae1ff6ad49ee7ada8445d6adceea86590c8",
+          "bytes": 5867,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        },
+        {
+          "path": "tests/content-dom.test.ts",
+          "url": "https://github.com/kiron0/fillo/blob/8ad3b7f54e16670767f0a54a3224ebc6f18c5ab5/tests/content-dom.test.ts",
+          "sha256": "5c7be6897904c31b9cfaf5a60cceaf301771c46404b0e882c169cb96456e583b",
+          "bytes": 78827,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "ArtikTheOnlyOne/gemini-form-filler",
+      "url": "https://github.com/ArtikTheOnlyOne/gemini-form-filler",
+      "stars": 5,
+      "pushedAt": "2026-09-25T05:21:32Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": "Apache-2.0",
+      "topics": [
+        "ai",
+        "gemini",
+        "gemini-ai",
+        "gemini-api",
+        "gemini-flash",
+        "gemini-pro",
+        "google",
+        "google-form",
+        "google-forms",
+        "google-forms-automation",
+        "google-gemini"
+      ],
+      "sha": "f6b947e12bcbd6386874d4c425e79f65d75e1181",
+      "commitDate": "2026-09-25T05:15:27Z",
+      "treeTruncated": false,
+      "fileCount": 23,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/ArtikTheOnlyOne/gemini-form-filler/blob/f6b947e12bcbd6386874d4c425e79f65d75e1181/README.md",
+      "evidence": [
+        {
+          "path": "content/content.js",
+          "url": "https://github.com/ArtikTheOnlyOne/gemini-form-filler/blob/f6b947e12bcbd6386874d4c425e79f65d75e1181/content/content.js",
+          "sha256": "b3b427ca15a6b660f7ffd364c10e9f9fac83a2d49803fc9d31b4a1529a7c7434",
+          "bytes": 26380,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "Adam-ZS/GoogleForms",
+      "error": "gh: Not Found (HTTP 404)\n"
+    },
+    {
+      "repo": "Adam-ZS/Microsoft-Forms-Fill-Bot",
+      "error": "gh: Not Found (HTTP 404)\n"
+    },
+    {
+      "repo": "tienthanh214/googleform-autofill-and-submit",
+      "url": "https://github.com/tienthanh214/googleform-autofill-and-submit",
+      "stars": 108,
+      "pushedAt": "2026-06-29T13:35:18Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": "MIT",
+      "topics": [
+        "automatic",
+        "generator",
+        "google-form",
+        "requests",
+        "submit-form"
+      ],
+      "sha": "2fcc051e5891e94feb6726a7949b66032222179e",
+      "commitDate": "2026-06-29T13:35:10Z",
+      "treeTruncated": false,
+      "fileCount": 10,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/tienthanh214/googleform-autofill-and-submit/blob/2fcc051e5891e94feb6726a7949b66032222179e/README.md",
+      "evidence": []
+    },
+    {
+      "repo": "BeastBoy2209/google-forms-ai-autofiller",
+      "url": "https://github.com/BeastBoy2209/google-forms-ai-autofiller",
+      "stars": 11,
+      "pushedAt": "2026-04-24T09:30:17Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": "MIT",
+      "topics": [],
+      "sha": "461234e27ef2e5fff13110748145ba9c9fb4b4a6",
+      "commitDate": "2026-04-22T20:20:55Z",
+      "treeTruncated": false,
+      "fileCount": 10,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/BeastBoy2209/google-forms-ai-autofiller/blob/461234e27ef2e5fff13110748145ba9c9fb4b4a6/README.md",
+      "evidence": []
+    },
+    {
+      "repo": "rauf17/form-forge",
+      "url": "https://github.com/rauf17/form-forge",
+      "stars": 4,
+      "pushedAt": "2026-06-08T18:38:25Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": null,
+      "topics": [],
+      "sha": "657ac28931670a922534b6cfa3f262525add423a",
+      "commitDate": "2026-06-08T18:38:25Z",
+      "treeTruncated": false,
+      "fileCount": 7,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/rauf17/form-forge/blob/657ac28931670a922534b6cfa3f262525add423a/README.md",
+      "evidence": [
+        {
+          "path": "content.js",
+          "url": "https://github.com/rauf17/form-forge/blob/657ac28931670a922534b6cfa3f262525add423a/content.js",
+          "sha256": "26d2a06a0ba7af600315c106d779ee6e6bd913e2418123fff2043449282c3d86",
+          "bytes": 13725,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "deepak0x/ai-form-filler",
+      "url": "https://github.com/deepak0x/ai-form-filler",
+      "stars": 3,
+      "pushedAt": "2026-07-18T21:49:09Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": "MIT",
+      "topics": [],
+      "sha": "59b45781432f296ace565c003dc02f18df4c4a3e",
+      "commitDate": "2026-07-18T21:49:08Z",
+      "treeTruncated": false,
+      "fileCount": 15,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/deepak0x/ai-form-filler/blob/59b45781432f296ace565c003dc02f18df4c4a3e/README.md",
+      "evidence": []
+    },
+    {
+      "repo": "AnuragRoque/FilloAI-Extension",
+      "url": "https://github.com/AnuragRoque/FilloAI-Extension",
+      "stars": 0,
+      "pushedAt": "2026-08-22T22:29:49Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": null,
+      "topics": [
+        "ai",
+        "autofill",
+        "chrome-extension",
+        "data-entry",
+        "form-automation",
+        "form-filling",
+        "form-filling-agent",
+        "form-filling-application",
+        "form-filling-automation",
+        "web-automation"
+      ],
+      "sha": "0478a04a65d6ef9584e63b7fb93319d90d403ab6",
+      "commitDate": "2026-08-22T22:29:43Z",
+      "treeTruncated": false,
+      "fileCount": 7,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/AnuragRoque/FilloAI-Extension/blob/0478a04a65d6ef9584e63b7fb93319d90d403ab6/README.md",
+      "evidence": []
+    },
+    {
+      "repo": "tmwclaxton/autoapplycv",
+      "url": "https://github.com/tmwclaxton/autoapplycv",
+      "stars": 62,
+      "pushedAt": "2026-10-04T19:29:37Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": "NOASSERTION",
+      "topics": [
+        "addon",
+        "addons",
+        "addons-mozilla-org",
+        "ai",
+        "apply",
+        "automation",
+        "chrome-extension",
+        "cv",
+        "firefox-extension",
+        "greenhouse",
+        "indeed",
+        "jobs",
+        "linkedin",
+        "workday"
+      ],
+      "sha": "a09e7509fcd3c351269d8334900a5cf1d8ab912d",
+      "commitDate": "2026-10-04T19:29:35Z",
+      "treeTruncated": false,
+      "fileCount": 18060,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/tmwclaxton/autoapplycv/blob/a09e7509fcd3c351269d8334900a5cf1d8ab912d/README.md",
+      "evidence": [
+        {
+          "path": "scripts/extension-benchmark/README.md",
+          "url": "https://github.com/tmwclaxton/autoapplycv/blob/a09e7509fcd3c351269d8334900a5cf1d8ab912d/scripts/extension-benchmark/README.md",
+          "sha256": "6eb0c6dc2dfe72ce897a4963c39fc882a1ecfb17c804e3a63582290006e3d5b6",
+          "bytes": 9559,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        },
+        {
+          "path": "scripts/extension-benchmark/lib/stats.mjs",
+          "url": "https://github.com/tmwclaxton/autoapplycv/blob/a09e7509fcd3c351269d8334900a5cf1d8ab912d/scripts/extension-benchmark/lib/stats.mjs",
+          "sha256": "f8d856d4d585ece3858fb8dc17d97909795704c034a692c119ea31ff3e854563",
+          "bytes": 1333,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "AutomaApp/automa",
+      "url": "https://github.com/AutomaApp/automa",
+      "stars": 21644,
+      "pushedAt": "2026-03-02T11:56:23Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": "NOASSERTION",
+      "topics": [
+        "automation",
+        "browser-automation",
+        "browser-extension",
+        "chrome-extension",
+        "firefox-extension",
+        "hacktoberfest",
+        "javascript",
+        "vue",
+        "workflow"
+      ],
+      "sha": "a4cbe34a60c92873c48c2470ca8ab1d96c22c7a0",
+      "commitDate": "2026-02-11T02:39:23Z",
+      "treeTruncated": false,
+      "fileCount": 540,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/AutomaApp/automa/blob/a4cbe34a60c92873c48c2470ca8ab1d96c22c7a0/README.md",
+      "evidence": [
+        {
+          "path": "src/utils/handleFormElement.js",
+          "url": "https://github.com/AutomaApp/automa/blob/a4cbe34a60c92873c48c2470ca8ab1d96c22c7a0/src/utils/handleFormElement.js",
+          "sha256": "465ef4afa2dfa7af88a5c7e4854c4545574ae793c51f359980b6e232e6c202f3",
+          "bytes": 4074,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        },
+        {
+          "path": "src/content/blocksHandler/handlerForms.js",
+          "url": "https://github.com/AutomaApp/automa/blob/a4cbe34a60c92873c48c2470ca8ab1d96c22c7a0/src/content/blocksHandler/handlerForms.js",
+          "sha256": "624b3da2a99cfb97a77348e090b34cf04e40dfec0832c18de44a259b6c91581b",
+          "bytes": 2300,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "tohodo/autofill",
+      "url": "https://github.com/tohodo/autofill",
+      "stars": 4,
+      "pushedAt": "2026-08-17T02:40:09Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": null,
+      "topics": [
+        "autoclick",
+        "autocomplete",
+        "autofill",
+        "autofiller",
+        "automate",
+        "automation",
+        "form-filler",
+        "macros",
+        "snippets",
+        "text-expander",
+        "userscript"
+      ],
+      "sha": "6bbbd1558ac3acae8ca2274caffea4d40e7a757e",
+      "commitDate": "2026-08-17T02:40:08Z",
+      "treeTruncated": false,
+      "fileCount": 11,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/tohodo/autofill/blob/6bbbd1558ac3acae8ca2274caffea4d40e7a757e/README.md",
+      "evidence": [
+        {
+          "path": "news-2024.md",
+          "url": "https://github.com/tohodo/autofill/blob/6bbbd1558ac3acae8ca2274caffea4d40e7a757e/news-2024.md",
+          "sha256": "b9081bdd89662fab50f6ab0578cd9eed15d933ee010f3d1273cec2b577cf4015",
+          "bytes": 73524,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "FakeFiller/fake-filler-extension",
+      "url": "https://github.com/FakeFiller/fake-filler-extension",
+      "stars": 654,
+      "pushedAt": "2024-05-07T08:41:32Z",
+      "archived": false,
+      "defaultBranch": "master",
+      "license": "MIT",
+      "topics": [
+        "chrome-extension",
+        "developer-tools",
+        "dummy-data-generator",
+        "edge-extension",
+        "firefox-addon",
+        "firefox-extension",
+        "productivity",
+        "random"
+      ],
+      "fetchedAt": "2026-10-05T07:37:55.630Z",
+      "sha": "36daf90519a7208b301af8df0863ad6b789c9306",
+      "commitDate": "2023-11-17T13:50:39Z",
+      "treeTruncated": false,
+      "fileCount": 83,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/FakeFiller/fake-filler-extension/blob/36daf90519a7208b301af8df0863ad6b789c9306/README.md",
+      "evidence": [
+        {
+          "path": "src/common/element-filler.ts",
+          "url": "https://github.com/FakeFiller/fake-filler-extension/blob/36daf90519a7208b301af8df0863ad6b789c9306/src/common/element-filler.ts",
+          "sha256": "df4e05bc579647b44c48d15904ee01256ac6ddbfedd092e86acf5c6cdea46376",
+          "bytes": 22008,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        },
+        {
+          "path": "src/common/fake-filler.ts",
+          "url": "https://github.com/FakeFiller/fake-filler-extension/blob/36daf90519a7208b301af8df0863ad6b789c9306/src/common/fake-filler.ts",
+          "sha256": "e71bdad76f9917ec1441a0cd39c247e91379a87c48a14c56364e4b95f7aa39cb",
+          "bytes": 2377,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "thuyydt/formfiller",
+      "url": "https://github.com/thuyydt/formfiller",
+      "stars": 5,
+      "pushedAt": "2026-02-10T04:15:53Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": "MIT",
+      "topics": [],
+      "fetchedAt": "2026-10-05T07:37:59.422Z",
+      "sha": "c4121e6144e9a015cc2aaa59532eb8c79ab9caaa",
+      "commitDate": "2026-02-10T04:15:45Z",
+      "treeTruncated": false,
+      "fileCount": 938,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/thuyydt/formfiller/blob/c4121e6144e9a015cc2aaa59532eb8c79ab9caaa/README.md",
+      "evidence": [
+        {
+          "path": "content.ts",
+          "url": "https://github.com/thuyydt/formfiller/blob/c4121e6144e9a015cc2aaa59532eb8c79ab9caaa/content.ts",
+          "sha256": "c306ffd77cff19108257c5ba77023218ef0ff4a0311ad3beab227fa2d82d245b",
+          "bytes": 7459,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        },
+        {
+          "path": "docs/demos/form-vi.html",
+          "url": "https://github.com/thuyydt/formfiller/blob/c4121e6144e9a015cc2aaa59532eb8c79ab9caaa/docs/demos/form-vi.html",
+          "sha256": "5fa9b24bd92a9efa179b070dd134dc08a8eeb72f8cdb6b51d631e9a318577318",
+          "bytes": 8960,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "dat1208/script-hutech-survey",
+      "url": "https://github.com/dat1208/script-hutech-survey",
+      "stars": 0,
+      "pushedAt": "2023-01-06T12:50:55Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": null,
+      "topics": [],
+      "fetchedAt": "2026-10-05T07:38:02.128Z",
+      "sha": "f9772e2ffb112f592aa64ad31b298d7294920e29",
+      "commitDate": "2023-01-06T12:50:55Z",
+      "treeTruncated": false,
+      "fileCount": 2,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/dat1208/script-hutech-survey/blob/f9772e2ffb112f592aa64ad31b298d7294920e29/README.md",
+      "evidence": [
+        {
+          "path": "script.js",
+          "url": "https://github.com/dat1208/script-hutech-survey/blob/f9772e2ffb112f592aa64ad31b298d7294920e29/script.js",
+          "sha256": "d701ce2c9022cd15db963658c2c6da3b5a4f6ee14a2ee8027ab3d88782c133b8",
+          "bytes": 1390,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "hcdkhanh/autosurvey",
+      "url": "https://github.com/hcdkhanh/autosurvey",
+      "stars": 13,
+      "pushedAt": "2022-08-01T02:22:38Z",
+      "archived": false,
+      "defaultBranch": "master",
+      "license": null,
+      "topics": [],
+      "fetchedAt": "2026-10-05T07:38:04.923Z",
+      "sha": "1d5899d2f94740f7b6801fe9b3e4b40362986cfc",
+      "commitDate": "2022-08-01T02:22:38Z",
+      "treeTruncated": false,
+      "fileCount": 9,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/hcdkhanh/autosurvey/blob/1d5899d2f94740f7b6801fe9b3e4b40362986cfc/README.md",
+      "evidence": [
+        {
+          "path": "getlink.js",
+          "url": "https://github.com/hcdkhanh/autosurvey/blob/1d5899d2f94740f7b6801fe9b3e4b40362986cfc/getlink.js",
+          "sha256": "b66719217ba100d0e96552f05b57771c7b4d3e98db13f877ea95b5b6199e8bc1",
+          "bytes": 470,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "ngntrgduc/HCMUS-danh-gia-mon-hoc",
+      "url": "https://github.com/ngntrgduc/HCMUS-danh-gia-mon-hoc",
+      "stars": 9,
+      "pushedAt": "2024-02-04T16:33:07Z",
+      "archived": false,
+      "defaultBranch": "master",
+      "license": "MIT",
+      "topics": [
+        "hcmus"
+      ],
+      "fetchedAt": "2026-10-05T07:38:08.265Z",
+      "sha": "8453cbd4a83699e2090355a599597221ac4df25a",
+      "commitDate": "2024-02-04T16:33:07Z",
+      "treeTruncated": false,
+      "fileCount": 3,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/ngntrgduc/HCMUS-danh-gia-mon-hoc/blob/8453cbd4a83699e2090355a599597221ac4df25a/README.md",
+      "evidence": [
+        {
+          "path": "main.js",
+          "url": "https://github.com/ngntrgduc/HCMUS-danh-gia-mon-hoc/blob/8453cbd4a83699e2090355a599597221ac4df25a/main.js",
+          "sha256": "e54af9392c79f3609c93f2c74732406060e2e265c4abbf136eabb16cacbba869",
+          "bytes": 1700,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    },
+    {
+      "repo": "qvanphong/vhu-auto-survey",
+      "url": "https://github.com/qvanphong/vhu-auto-survey",
+      "stars": 0,
+      "pushedAt": "2018-11-26T18:08:47Z",
+      "archived": false,
+      "defaultBranch": "master",
+      "license": null,
+      "topics": [],
+      "fetchedAt": "2026-10-05T07:38:11.222Z",
+      "sha": "19822fdd650dd7a9482b85b745a422016a37be8d",
+      "commitDate": "2018-11-26T18:05:28Z",
+      "treeTruncated": false,
+      "fileCount": 16,
+      "readme": null,
+      "readmeUrl": null,
+      "evidence": []
+    },
+    {
+      "repo": "leducnh1290/Auto-Select-Survey",
+      "url": "https://github.com/leducnh1290/Auto-Select-Survey",
+      "stars": 0,
+      "pushedAt": "2024-11-10T08:44:01Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": "MIT",
+      "topics": [],
+      "fetchedAt": "2026-10-05T07:38:13.891Z",
+      "sha": "41e2ba7ce1651f91ec72eea9825054c6316591a1",
+      "commitDate": "2024-11-10T08:44:00Z",
+      "treeTruncated": false,
+      "fileCount": 6,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/leducnh1290/Auto-Select-Survey/blob/41e2ba7ce1651f91ec72eea9825054c6316591a1/README.md",
+      "evidence": []
+    },
+    {
+      "repo": "kumorikuma/survey_autofill_extension",
+      "url": "https://github.com/kumorikuma/survey_autofill_extension",
+      "stars": 7,
+      "pushedAt": "2023-01-20T13:29:00Z",
+      "archived": false,
+      "defaultBranch": "main",
+      "license": null,
+      "topics": [],
+      "fetchedAt": "2026-10-05T07:38:16.493Z",
+      "sha": "210105db88f104b1c8e8e4a333033627a3663bc6",
+      "commitDate": "2023-01-20T13:29:00Z",
+      "treeTruncated": false,
+      "fileCount": 14,
+      "readme": "README.md",
+      "readmeUrl": "https://github.com/kumorikuma/survey_autofill_extension/blob/210105db88f104b1c8e8e4a333033627a3663bc6/README.md",
+      "evidence": [
+        {
+          "path": "content-script.js",
+          "url": "https://github.com/kumorikuma/survey_autofill_extension/blob/210105db88f104b1c8e8e4a333033627a3663bc6/content-script.js",
+          "sha256": "6e9a548951e86fe0b689a9739fbdd5c59dfff3af686954da19ff4a276944fb57",
+          "bytes": 19500,
+          "acquisition": "Downloaded as .source.txt for static inspection; not executed"
+        }
+      ]
+    }
+  ]
+}

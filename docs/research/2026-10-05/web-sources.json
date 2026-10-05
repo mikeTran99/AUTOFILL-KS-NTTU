@@ -1,0 +1,94 @@
+{
+  "checkedDate": "2026-10-05",
+  "method": "Manual web search/open of primary vendor, store, userscript and standards pages; no runtime scores. Version labels are page observations, not installed packages.",
+  "sources": [
+    {
+      "name": "Lightning Autofill store",
+      "url": "https://chromewebstore.google.com/detail/lightning-autofill/nlmmgnhgdeffjkdckmikfpnddkbbfkkk",
+      "observedVersion": "14.24.3",
+      "level": "vendor/store"
+    },
+    {
+      "name": "Lightning resources",
+      "url": "https://docs.lightningautofill.com/resources",
+      "level": "vendor/docs"
+    },
+    {
+      "name": "Lightning changelog",
+      "url": "https://lightningautofill.com/changelog.txt",
+      "level": "vendor/docs"
+    },
+    {
+      "name": "Fake Filler site",
+      "url": "https://fakefiller.com/",
+      "level": "vendor/docs"
+    },
+    {
+      "name": "Fake Filler store",
+      "url": "https://chromewebstore.google.com/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo",
+      "observedVersion": "4.1.0",
+      "level": "vendor/store"
+    },
+    {
+      "name": "Fake Filler field/profile wiki",
+      "url": "https://github.com/FakeFiller/fake-filler-extension/wiki/Customization-using-Custom-Fields-and-Profiles",
+      "level": "vendor/docs"
+    },
+    {
+      "name": "Fake Data docs",
+      "url": "https://docs.fakedata.pro/how-to-use-fake-data/",
+      "level": "vendor/docs"
+    },
+    {
+      "name": "Fake Data Undo",
+      "url": "https://docs.fakedata.pro/how-to-use-fake-data/pro/undo-input-fill.html",
+      "level": "vendor/docs"
+    },
+    {
+      "name": "Fake Data Google integration",
+      "url": "https://docs.fakedata.pro/how-to-use-fake-data/pro/custom-integrations/google-forms.html",
+      "level": "vendor/docs"
+    },
+    {
+      "name": "Gemini userscript source",
+      "url": "https://greasyfork.org/en/scripts/547099-google-forms-ai-form-filler-gemini/code",
+      "observedVersion": "1.1.3",
+      "level": "source-page"
+    },
+    {
+      "name": "Microsoft Smart Enhancer",
+      "url": "https://greasyfork.org/ar/scripts/596242-microsoft-forms-smart-enhancer-%D9%85%D8%AD%D8%B3%D9%86-microsoft-forms-%D8%A7%D9%84%D8%B0%D9%83%D9%8A",
+      "level": "listing-only"
+    },
+    {
+      "name": "Chrome scripting",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/scripting",
+      "level": "official-standard-api"
+    },
+    {
+      "name": "React input",
+      "url": "https://react.dev/reference/react-dom/components/input",
+      "level": "official-api"
+    },
+    {
+      "name": "W3C combobox",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+      "level": "official-pattern"
+    },
+    {
+      "name": "SurveyJS conditions",
+      "url": "https://surveyjs.io/form-library/documentation/design-survey/conditional-logic",
+      "level": "official-api"
+    },
+    {
+      "name": "SurveyJS matrix",
+      "url": "https://surveyjs.io/form-library/documentation/api-reference/questionmatrixbasemodel",
+      "level": "official-api"
+    },
+    {
+      "name": "Playwright extension tests",
+      "url": "https://playwright.dev/docs/chrome-extensions",
+      "level": "official-api"
+    }
+  ]
+}

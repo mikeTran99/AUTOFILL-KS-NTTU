@@ -1,0 +1,48 @@
+{
+  "measuredAt": "2026-10-05T07:49:56.771Z",
+  "runtimeBaseline": "1a8c9c0c2cded8a23e8567ff9a28aeaf517ea3c2",
+  "sourceSha256": {
+    "shared.js": "6a824e34d963edb99b9a5e3078639ff7b684db009055dfd074e5609dc9ab1528",
+    "content.js": "d284c4627612f4717e29bfddd421b6aed27098fb1d48f10a3407a57c4d5b98d5"
+  },
+  "browser": "145.0.7632.6",
+  "kind": "Targeted gap reproductions; not representative success-rate or competitor scores",
+  "observations": [
+    {
+      "id": "semantic-na",
+      "requested": "Highest satisfaction, excluding N/A",
+      "expected": "Rất hài lòng",
+      "actual": "Không áp dụng",
+      "gapObserved": true
+    },
+    {
+      "id": "reversed-numeric-scale",
+      "requested": "Highest numeric score on a reversed 7..1 scale",
+      "expected": "7",
+      "actual": "1",
+      "gapObserved": true
+    },
+    {
+      "id": "closed-combobox",
+      "expectedQuestions": 1,
+      "actualQuestions": 0,
+      "gapObserved": true
+    },
+    {
+      "id": "seed-rerender",
+      "sameHtml": true,
+      "sameSeed": true,
+      "changedIds": 16,
+      "changedAnswers": 11,
+      "gapObserved": true
+    },
+    {
+      "id": "fractional-step-any",
+      "requested": "Midpoint of 0..1 with arbitrary decimal step",
+      "expected": "0.5",
+      "actual": "1",
+      "filled": 1,
+      "gapObserved": true
+    }
+  ]
+}
