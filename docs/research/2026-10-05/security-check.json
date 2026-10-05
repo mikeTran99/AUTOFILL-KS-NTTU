@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-05T07:53:54.3123466Z",
+  "scope": "Project directory including ignored source cache; not a full-device scan",
+  "sourceHandling": "26 competitor files stored as .source.txt, static reading only; no competitor execution or installation",
+  "scanner": {
+    "product": "Microsoft Defender Antivirus",
+    "engineProductVersion": "4.18.26080.4",
+    "antivirusEnabled": true,
+    "realTimeProtection": true,
+    "behaviorMonitoring": true,
+    "signatureUpdatedAt": "2026-10-04T13:28:59.0000000Z",
+    "customScanStartedAt": "2026-10-05T07:53:51.2189039Z",
+    "customScanCompletedAt": "2026-10-05T07:53:54.3123466Z",
+    "historicalProjectDetectionRecords": 0,
+    "newProjectDetectionRecords": 0,
+    "activeProjectThreats": 0
+  },
+  "npmAudit": {
+    "exitCode": 0,
+    "report": {
+      "auditReportVersion": 2,
+      "vulnerabilities": {},
+      "metadata": {
+        "vulnerabilities": {
+          "info": 0,
+          "low": 0,
+          "moderate": 0,
+          "high": 0,
+          "critical": 0,
+          "total": 0
+        },
+        "dependencies": {
+          "prod": 1,
+          "dev": 3,
+          "optional": 1,
+          "peer": 0,
+          "peerOptional": 0,
+          "total": 3
+        }
+      }
+    },
+    "lockfileSha256": "da872f997ff9395af269560dc1310be3ba7845d7a052e4ea767a4e777567aea3"
+  },
+  "runtimeChanged": false,
+  "limitation": "No detection in this scan and no known dependency advisory do not prove absence of unknown malware or future compromise."
+}

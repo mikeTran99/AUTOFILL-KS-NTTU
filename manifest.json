@@ -1,13 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Auto Fill Khảo Sát",
-  "version": "1.5",
+  "version": "2.0.0",
   "description": "Tiện ích hỗ trợ tự động điền phiếu đánh giá môn học/khảo sát bằng Side Panel.",
   "minimum_chrome_version": "114",
   "permissions": [
     "activeTab",
     "scripting",
-    "sidePanel"
+    "sidePanel",
+    "storage"
   ],
   "action": {
     "default_title": "Mở Bảng Điều Khiển Auto Fill",

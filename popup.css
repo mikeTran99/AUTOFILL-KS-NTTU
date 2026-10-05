@@ -1,0 +1,236 @@
+:root{
+  color-scheme:dark;
+  --bg:#10151e;
+  --card:#19212d;
+  --line:#344053;
+  --text:#edf0f5;
+  --muted:#aeb9ca;
+  --gold:#e6c578;
+  --accent:#f5d68d;
+  --error:#ffafb3;
+  font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+  *{
+    box-sizing:border-box}
+    body{
+      margin:0;
+      min-width:280px;
+      background:var(--bg);
+      color:var(--text)}
+      header{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:20px 16px 14px}
+        .brand{
+          display:flex;
+          align-items:center;
+          gap:10px}
+          .brand img{
+            border-radius:10px}
+            h1{
+              font-size:17px;
+              line-height:1.2;
+              margin:0}
+              h1 span{
+                font-weight:400}
+                header p{
+                  font-size:11px;
+                  color:var(--muted);
+                  margin:5px 0 0}
+                  .version,.tag{
+                    font-size:11px;
+                    border:1px solid var(--line);
+                    color:var(--gold);
+                    padding:2px 7px;
+                    border-radius:20px;
+                    white-space:nowrap}
+                    .platform-tabs{
+                      display:flex;
+                      gap:4px;
+                      padding:0 12px 12px}
+                      .platform-tabs button{
+                        flex:1;
+                        background:transparent;
+                        font-size:11px;
+                        padding:8px 3px;
+                        color:var(--muted);
+                        border-color:transparent}
+                        .platform-tabs [aria-selected=true]{
+                          background:#2e2a20;
+                          border-color:#756443;
+                          color:var(--accent)}
+                          main{
+                            padding:0 12px 16px}
+                            .platform-note{
+                              border-left:2px solid var(--gold);
+                              padding:0 10px;
+                              margin:0 2px 16px;
+                              font-size:12px}
+                              .platform-note p{
+                                margin:4px 0}
+                                .card{
+                                  background:var(--card);
+                                  border:1px solid var(--line);
+                                  border-radius:12px;
+                                  padding:14px;
+                                  margin:12px 0}
+                                  .section-title{
+                                    display:flex;
+                                    gap:8px;
+                                    align-items:center;
+                                    justify-content:space-between;
+                                    margin-bottom:10px}
+                                    h2{
+                                      font-size:14px;
+                                      margin:0}
+                                      label{
+                                        display:block;
+                                        font-size:12px;
+                                        margin:10px 0 5px;
+                                        color:var(--muted)}
+                                        input,select,textarea{
+                                          display:block;
+                                          width:100%;
+                                          border:1px solid var(--line);
+                                          border-radius:7px;
+                                          padding:9px 10px;
+                                          background:#101823;
+                                          color:var(--text);
+                                          font:inherit;
+                                          font-size:13px}
+                                          input::placeholder,textarea::placeholder{
+                                            color:#929eb0}
+                                            textarea{
+                                              resize:vertical}
+                                              input[type=checkbox]{
+                                                width:16px;
+                                                height:16px;
+                                                flex:0 0 16px;
+                                                margin:0;
+                                                accent-color:var(--gold)}
+                                                input[type=number]{
+                                                  appearance:textfield}
+                                                  button,.file-button{
+                                                    border:1px solid var(--line);
+                                                    border-radius:7px;
+                                                    background:var(--card);
+                                                    color:var(--text);
+                                                    font:inherit;
+                                                    font-size:13px;
+                                                    padding:8px 11px;
+                                                    cursor:pointer;
+                                                    white-space:nowrap}
+                                                    button:hover,.file-button:hover{
+                                                      border-color:var(--gold)}
+                                                      button:disabled{
+                                                        opacity:.5;
+                                                        cursor:default}
+                                                        .primary{
+                                                          background:var(--gold);
+                                                          color:#181b23;
+                                                          border-color:var(--gold);
+                                                          font-weight:700;
+                                                          flex:1}
+                                                          .secondary{
+                                                            background:#202c3d}
+                                                            .text-button,.file-button{
+                                                              border-color:transparent;
+                                                              background:transparent;
+                                                              color:var(--accent);
+                                                              font-size:12px;
+                                                              padding:7px 3px}
+                                                              .file-button{
+                                                                display:inline-block;
+                                                                margin:0}
+                                                                .row{
+                                                                  display:flex;
+                                                                  align-items:center;
+                                                                  gap:7px}
+                                                                  .row input,.row select{
+                                                                    flex:1;
+                                                                    min-width:0}
+                                                                    .grid{
+                                                                      display:grid;
+                                                                      grid-template-columns:1fr 1fr;
+                                                                      gap:0 10px}
+                                                                      .grid .wide{
+                                                                        grid-column:1/-1}
+                                                                        .hint,.muted{
+                                                                          font-size:11px;
+                                                                          color:var(--muted)}
+                                                                          .hint{
+                                                                            margin:8px 0 0}
+                                                                            details{
+                                                                              margin:10px 0 0}
+                                                                              summary{
+                                                                                color:var(--gold);
+                                                                                font-size:12px;
+                                                                                cursor:pointer;
+                                                                                padding:4px 0}
+                                                                                summary .muted{
+                                                                                  margin-left:4px}
+                                                                                  .check{
+                                                                                    display:flex;
+                                                                                    align-items:center;
+                                                                                    gap:9px;
+                                                                                    color:var(--text)}
+                                                                                    .small-actions{
+                                                                                      margin-top:8px}
+                                                                                      .question{
+                                                                                        border-top:1px solid var(--line);
+                                                                                        padding:12px 0}
+                                                                                        .question:first-child{
+                                                                                          margin-top:10px}
+                                                                                          .question p{
+                                                                                            margin:3px 0;
+                                                                                            font-size:12px;
+                                                                                            overflow-wrap:anywhere}
+                                                                                            .question .answer{
+                                                                                              color:var(--accent)}
+                                                                                              .question select{
+                                                                                                margin-top:7px;
+                                                                                                font-size:12px}
+                                                                                                .question textarea{
+                                                                                                  margin-top:6px}
+                                                                                                  .question label{
+                                                                                                    margin-top:6px}
+                                                                                                    .bad{
+                                                                                                      color:var(--error)}
+                                                                                                      #resultRows p{
+                                                                                                        font-size:12px;
+                                                                                                        border-top:1px solid var(--line);
+                                                                                                        padding-top:7px;
+                                                                                                        overflow-wrap:anywhere}
+                                                                                                        footer{
+                                                                                                          position:sticky;
+                                                                                                          bottom:0;
+                                                                                                          background:#10151ef5;
+                                                                                                          border-top:1px solid var(--line);
+                                                                                                          padding:10px 12px 12px;
+                                                                                                          backdrop-filter:blur(10px)}
+                                                                                                          #status{
+                                                                                                            font-size:12px;
+                                                                                                            margin-bottom:9px;
+                                                                                                            overflow-wrap:anywhere}
+                                                                                                            progress{
+                                                                                                              width:100%;
+                                                                                                              height:5px;
+                                                                                                              accent-color:var(--gold);
+                                                                                                              margin-bottom:8px}
+                                                                                                              button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,.file-button:focus-within{
+                                                                                                                outline:2px solid var(--gold);
+                                                                                                                outline-offset:2px}
+                                                                                                                [hidden]{
+                                                                                                                  display:none!important}
+                                                                                                                  @media(max-width:310px){
+                                                                                                                    .grid{
+                                                                                                                      grid-template-columns:1fr}
+                                                                                                                      .platform-tabs button{
+                                                                                                                        font-size:10px}
+                                                                                                                        .brand img{
+                                                                                                                          display:none}
+                                                                                                                        }
+                                                                                                                        @media(prefers-reduced-motion:reduce){
+                                                                                                                          *{
+                                                                                                                            scroll-behavior:auto!important}
+                                                                                                                          }

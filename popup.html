@@ -1,212 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <style>
-        :root {
-            --primary: #d4af37; /* Luxury Gold */
-            --primary-dark: #aa771c;
-            --bg-dark: #0f121b;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --shadow-3d: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        }
-        
-        body {
-            margin: 0;
-            padding: 20px;
-            width: 100%; /* Flexible width for Side Panel */
-            min-width: 320px;
-            background: linear-gradient(135deg, #0b0c10 0%, #1f2833 100%);
-            color: #fff;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            overflow-x: hidden;
-            box-sizing: border-box;
-            min-height: 100vh; /* Fill full height in side panel */
-        }
-
-        .container {
-            background: var(--glass-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 25px 20px;
-            box-shadow: var(--shadow-3d);
-            position: relative;
-            transform-style: preserve-3d;
-            perspective: 1000px;
-        }
-
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 100%;
-            border-radius: 24px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%);
-            pointer-events: none;
-        }
-
-        h2 {
-            margin: 0 0 25px 0;
-            font-weight: 800;
-            font-size: 20px;
-            text-align: center;
-            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0px 4px 10px rgba(0,0,0,0.6);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .form-group {
-            position: relative;
-            transform: translateZ(10px);
-        }
-        
-        .form-group.full-width {
-            grid-column: 1 / -1;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 11px;
-            font-weight: 600;
-            color: #c5c6c7;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .form-group input, .form-group select {
-            width: 100%;
-            box-sizing: border-box;
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            color: #fff;
-            padding: 12px 14px;
-            border-radius: 12px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            font-size: 13px;
-            outline: none;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            box-shadow: inset 0 3px 6px rgba(0,0,0,0.4), 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        /* Select specific styles */
-        .form-group select {
-            appearance: none;
-            -webkit-appearance: none;
-            cursor: pointer;
-            background-image: url('data:image/svg+xml;utf8,<svg fill="%23d4af37" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-            background-repeat: no-repeat;
-            background-position-x: 95%;
-            background-position-y: 50%;
-        }
-
-        .form-group select option {
-            background-color: var(--bg-dark);
-            color: #fff;
-            padding: 10px;
-        }
-
-        .form-group input::placeholder {
-            color: rgba(255, 255, 255, 0.2);
-        }
-
-        .form-group input:focus, .form-group select:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3), inset 0 3px 6px rgba(0,0,0,0.5);
-            background: rgba(0, 0, 0, 0.6);
-            transform: translateY(-2px);
-        }
-
-        .btn-submit {
-            width: 100%;
-            background: linear-gradient(135deg, #fcf6ba, #d4af37, #aa771c);
-            color: #111;
-            border: none;
-            padding: 16px;
-            border-radius: 14px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            font-weight: 800;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            cursor: pointer;
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3), inset 0 2px 0 rgba(255,255,255,0.8);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-            transform: translateZ(20px);
-        }
-
-        .btn-submit:hover {
-            transform: translateY(-4px) translateZ(20px) scale(1.02);
-            box-shadow: 0 12px 25px rgba(212, 175, 55, 0.5), inset 0 2px 0 rgba(255,255,255,0.9);
-        }
-
-        .btn-submit:active {
-            transform: translateY(2px) translateZ(20px) scale(0.98);
-            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3), inset 0 1px 0 rgba(255,255,255,0.4);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoFill KS NTTU</title>
+  <link rel="stylesheet" href="popup.css">
+  <script defer src="shared.js"></script>
+  <script defer src="popup.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h2>AutoFill KS NTTU</h2>
-        
-        <div class="form-grid">
-            <div class="form-group full-width">
-                <label>Tùy chọn mức độ đánh giá (5 mức)</label>
-                <select id="mucDo">
-                    <option value="Hoàn toàn đồng ý">Hoàn toàn đồng ý / Rất hài lòng</option>
-                    <option value="Đồng ý">Đồng ý / Hài lòng</option>
-                    <option value="Phân vân">Phân vân / Bình thường</option>
-                    <option value="Không đồng ý">Không đồng ý / Không hài lòng</option>
-                    <option value="Hoàn toàn không đồng ý">Hoàn toàn không đồng ý / Rất tệ</option>
-                </select>
-            </div>
-            
-            <div class="form-group full-width">
-                <label>Tên môn học</label>
-                <input type="text" id="tenMonHoc" placeholder="Nhập tên môn học...">
-            </div>
-            <div class="form-group full-width">
-                <label>Giảng viên</label>
-                <input type="text" id="giangVien" placeholder="Nhập tên giảng viên...">
-            </div>
-            <div class="form-group full-width">
-                <label>Mã môn học</label>
-                <input type="text" id="maMonHoc" placeholder="Nhập mã môn học...">
-            </div>
-            <div class="form-group">
-                <label>Khoa</label>
-                <input type="text" id="khoa" placeholder="Khoa...">
-            </div>
-            <div class="form-group">
-                <label>Học kỳ</label>
-                <input type="text" id="hocKy" placeholder="Ví dụ: 1">
-            </div>
-            <div class="form-group full-width">
-                <label>Năm học</label>
-                <input type="text" id="namHoc" placeholder="Ví dụ: 2026-2027">
-            </div>
-        </div>
-
-        <button class="btn-submit" id="fillBtn">Chạy Auto Fill</button>
-    </div>
-    
-    <script src="popup.js"></script>
+  <header><div class="brand"><img src="icon.png" alt="" width="36" height="36"><div><h1>AutoFill <span>Khảo sát</span></h1><p>Chọn theo ý bạn. Kiểm tra trước khi gửi.</p></div></div><a class="version" href="HUONG_DAN_SU_DUNG.html" target="_blank" rel="noopener" title="Hướng dẫn sử dụng">2.0 · ?</a></header>
+  <nav class="platform-tabs" role="tablist" aria-label="Loại khảo sát">
+    <button id="tab-nttu" role="tab" aria-selected="true" aria-controls="platformHelp" data-platform="nttu">NTTU / HTML</button>
+    <button id="tab-google" role="tab" aria-selected="false" aria-controls="platformHelp" data-platform="google" tabindex="-1">Google Forms</button>
+    <button id="tab-microsoft" role="tab" aria-selected="false" aria-controls="platformHelp" data-platform="microsoft" tabindex="-1">Microsoft Forms</button>
+  </nav>
+  <main>
+    <section class="platform-note" id="platformHelp" role="tabpanel" aria-labelledby="tab-nttu"><p id="platformText"></p><p id="tabInfo" class="muted">Mở trang khảo sát rồi bấm quét.</p></section>
+    <section class="card">
+      <div class="section-title"><h2>Cách chọn đáp án</h2><span class="tag">Mọi thang điểm</span></div>
+      <label for="mode">Chế độ</label><select id="mode"><option value="fixed">Cố định</option><option value="random">Ngẫu nhiên đều</option><option value="weighted">Ngẫu nhiên có trọng số</option></select>
+      <div id="fixedSettings">
+        <label for="fixedMethod">Chọn cố định theo</label><select id="fixedMethod"><option value="scale">Mức trên thang đánh giá</option><option value="position">Vị trí đáp án (từ 1)</option><option value="text">Nhãn đáp án chính xác</option></select>
+        <div id="scoreSettings"><label for="fixedScore">Mức đánh giá</label><select id="fixedScore"><option value="100">Cao nhất / Hoàn toàn đồng ý</option><option value="75">75% / Đồng ý</option><option value="50">Giữa thang / Phân vân</option><option value="25">25% / Không đồng ý</option><option value="0">Thấp nhất / Hoàn toàn không đồng ý</option></select></div>
+        <div id="positionSettings" hidden><label for="fixedPosition">Vị trí</label><input id="fixedPosition" type="number" min="1" max="1000" value="1"></div>
+        <div id="labelSettings" hidden><label for="fixedText">Nhãn hoặc giá trị chính xác</label><input id="fixedText" placeholder="Ví dụ: Đồng ý"></div>
+        <p class="hint">Thang có nhãn đồng ý/hài lòng được nhận diện cả khi đảo thứ tự. Nhãn khác dùng thứ tự hiển thị từ đầu đến cuối.</p>
+      </div>
+      <div id="randomSettings" hidden>
+        <div class="grid"><div><label for="randomMin">Từ mức (%)</label><input id="randomMin" type="number" min="0" max="100" value="0"></div><div><label for="randomMax">Đến mức (%)</label><input id="randomMax" type="number" min="0" max="100" value="100"></div></div>
+        <div id="weightSettings" hidden><label for="weights">Trọng số 0% → 100% (5 số)</label><input id="weights" value="1, 1, 1, 3, 5" placeholder="1, 1, 1, 3, 5"><p class="hint">Số lớn hơn được chọn thường hơn. 0 loại mức đó.</p></div>
+        <label for="seed">Mã ngẫu nhiên (tùy chọn)</label><input id="seed" placeholder="Để trống cho mỗi lần quét khác nhau"><p class="hint">Cùng mã, biểu mẫu và cấu hình sẽ cho cùng lựa chọn.</p>
+      </div>
+      <details><summary>Chọn nhiều, văn bản và tốc độ</summary>
+        <div class="grid"><div><label for="checkboxMin">Số ô chọn tối thiểu</label><input id="checkboxMin" type="number" min="0" max="1000" value="1"></div><div><label for="checkboxMax">Số ô chọn tối đa</label><input id="checkboxMax" type="number" min="0" max="1000" value="1"></div></div>
+        <label for="textMode">Câu trả lời văn bản</label><select id="textMode"><option value="skip">Để trống / tự nhập</option><option value="fixed">Mẫu cố định (dòng đầu)</option><option value="random">Ngẫu nhiên từ các dòng</option></select>
+        <div id="textSettings" hidden><label for="textTemplates">Mẫu góp ý — mỗi dòng một mẫu</label><textarea id="textTemplates" rows="3" placeholder="Nhập nhận xét của bạn"></textarea></div>
+        <label class="check"><input id="numericEnabled" type="checkbox">Điền ô số/thanh điểm có giới hạn min/max</label>
+        <label class="check"><input id="overwrite" type="checkbox">Ghi đè câu trả lời có sẵn</label>
+        <label class="check"><input id="scroll" type="checkbox">Cuộn tới từng câu hỏi</label>
+        <label for="delayMs">Nghỉ giữa các câu (0–2000 ms)</label><input id="delayMs" type="number" min="0" max="2000" value="0">
+      </details>
+    </section>
+    <section class="card">
+      <details id="profileDetails"><summary>Thông tin cá nhân / môn học <span class="muted">Tùy chọn</span></summary><div id="profileFields" class="grid"></div></details>
+      <label for="profileName">Hồ sơ đã lưu</label><div class="row"><select id="profileName" aria-label="Chọn hồ sơ"><option value="">Chọn hồ sơ…</option></select><button id="loadProfile" class="secondary" title="Nạp hồ sơ">Nạp</button><button id="deleteProfile" class="secondary" title="Xóa hồ sơ">Xóa</button></div>
+      <label for="newProfileName">Tên hồ sơ</label><div class="row"><input id="newProfileName" maxlength="60" placeholder="Ví dụ: Học kỳ 1"><button id="saveProfile" class="secondary">Lưu</button></div>
+      <div class="row small-actions"><button id="exportProfile" class="text-button">Xuất JSON</button><label class="file-button">Nhập JSON<input id="importProfile" type="file" accept=".json,application/json" hidden></label></div><p class="hint">Hồ sơ lưu tại trình duyệt. File xuất có thể chứa thông tin cá nhân.</p>
+    </section>
+    <section class="card" id="previewCard">
+      <div class="section-title"><h2>Xem trước từng câu</h2><span id="questionCount" class="tag">Chưa quét</span></div>
+      <div class="row"><button id="scanBtn" class="secondary">Quét &amp; xem trước</button><button id="refreshPreview" class="text-button" disabled>Cập nhật đáp án</button></div>
+      <p id="previewHint" class="hint">Quét để kiểm tra đáp án, chỉnh riêng hoặc bỏ qua từng câu.</p>
+      <div id="questions"></div><button id="moreQuestions" class="text-button" hidden>Xem thêm câu hỏi</button>
+    </section>
+    <section class="card" id="resultCard" hidden><div class="section-title"><h2>Kết quả</h2><button id="exportReport" class="text-button">Xuất báo cáo</button></div><p id="resultSummary"></p><div id="resultWarnings"></div><div id="resultRows"></div></section>
+    <p class="hint">Điền trang hiện tại, sau đó bạn kiểm tra và tự bấm Gửi/Tiếp. Với câu hỏi mới xuất hiện, hãy quét lại.</p>
+  </main>
+  <footer><div id="status" role="status" aria-live="polite">Sẵn sàng.</div><progress id="progress" max="1" value="0" hidden aria-label="Tiến độ điền"></progress><div class="row"><button id="fillBtn" class="primary" disabled>Điền theo xem trước</button><button id="stopBtn" class="secondary" hidden>Dừng</button></div></footer>
 </body>
 </html>

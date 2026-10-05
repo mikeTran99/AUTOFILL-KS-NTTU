@@ -1,6 +1,13 @@
 * text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
+# Preserve the published benchmark baseline byte-for-byte, including its whitespace.
+tests/fixtures/baseline-v1.5.js whitespace=-blank-at-eol
 
 *.js text eol=lf
+*.cjs text eol=lf
+*.css text eol=lf
+*.yml text eol=lf
 *.json text eol=lf
 *.html text eol=lf
 *.md text eol=lf
