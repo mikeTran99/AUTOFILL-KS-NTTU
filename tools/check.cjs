@@ -1,0 +1,11 @@
+'use strict';
+const { execFileSync } = require('node:child_process');
+const { readFileSync, existsSync } = require('node:fs');
+const manifest = JSON.parse(readFileSync('manifest.json', 'utf8'));
+const pkg = JSON.parse(readFileSync('package.json', 'utf8'));
+if (manifest.version !== pkg.version || manifest.manifest_version !== 3) throw new Error('Manifest/package version mismatch');
+for (const path of ['shared.js', 'content.js', 'popup.js', 'background.js']) execFileSync(process.execPath, ['--check', path], { stdio: 'inherit' });
+for (const path of ['popup.html', 'popup.css', 'icon.png', manifest.background.service_worker]) if (!existsSync(path)) throw new Error(`Missing ${path}`);
+const html = readFileSync('popup.html', 'utf8');
+if (/<script[^>]*>(?!\s*<\/script>)/i.test(html) || /\son\w+\s*=/i.test(html)) throw new Error('Inline executable code violates MV3 CSP');
+console.log('Syntax, MV3 assets and versions verified.');

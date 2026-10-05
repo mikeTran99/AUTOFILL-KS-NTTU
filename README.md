@@ -1,54 +1,68 @@
-# AUTOFILL-KS-NTTU
+# AutoFill KS NTTU 2.0
 
-Tiện ích Chromium hỗ trợ tự động điền phiếu đánh giá môn học/khảo sát bằng Side Panel. Giao diện luôn nằm bên cạnh trang khảo sát, giúp người dùng nhập thông tin, chọn mức đánh giá và chạy thao tác điền tự động mà không bị đóng khi chuyển focus.
+Tiện ích Chromium Manifest V3 giúp điền trang khảo sát theo cấu hình của bạn, có Side Panel và ba tab trợ giúp **NTTU/HTML**, **Google Forms**, **Microsoft Forms**. Quét câu hỏi, kiểm tra đáp án dự kiến, chỉnh riêng từng câu rồi điền. Người dùng kiểm tra và gửi thủ công.
 
-## Tính năng
+## Chọn đáp án theo cách bạn muốn
 
-- Mở bảng điều khiển bằng Chrome Side Panel.
-- Chọn nhanh 5 mức đánh giá: từ "Hoàn toàn không đồng ý" đến "Hoàn toàn đồng ý".
-- Điền các trường thường gặp như tên môn học, giảng viên, mã môn học, khoa, học kỳ và năm học.
-- Mô phỏng thao tác nhập từng ký tự, cuộn tới từng câu hỏi và chọn radio theo mức đánh giá đã chọn.
-- Hỏi xác nhận trước khi bấm nút gửi nếu trang khảo sát có nút `btnGui`.
+- **Cố định:** theo mức đánh giá, vị trí đáp án từ 1 hoặc nhãn/giá trị chính xác. Thang 2/3/5/7/10 mức; nhãn đồng ý/hài lòng hỗ trợ cả thứ tự đảo ngược. Với nhãn khác, mức 0–100% theo thứ tự hiển thị.
+- **Ngẫu nhiên đều:** giới hạn khoảng mức muốn chọn; mã seed để lặp lại kết quả. Mỗi câu có chuỗi ngẫu nhiên riêng, giữ đáp án xem trước khi người dùng sửa câu khác.
+- **Ngẫu nhiên có trọng số:** 5 trọng số cho các mức 0/25/50/75/100%; có thể loại mức bằng trọng số 0.
+- **Nhiều đáp án:** số lựa chọn tối thiểu/tối đa, chọn không trùng; hỗ trợ checkbox và select nhiều.
+- **Văn bản:** bỏ qua, mẫu cố định hoặc chọn một dòng ngẫu nhiên. Trường cá nhân/môn học chỉ dùng thông tin bạn nhập hoặc đáp án riêng; không tự tạo danh tính.
+- **Điền riêng từng câu:** chọn đáp án, nhập nội dung hoặc bỏ qua trong bản xem trước, kể cả ô ngày tháng cần giá trị cụ thể.
 
-## Yêu cầu
+## Độ ổn định và quyền kiểm soát
 
-- Chrome, Microsoft Edge hoặc trình duyệt Chromium có hỗ trợ Manifest V3 và Side Panel.
-- Khuyến nghị Chrome 114 trở lên.
+- Radio HTML được nhóm đúng theo form và cây DOM; hỗ trợ nhóm ARIA, ma trận theo từng nhóm radio, textarea, select và listbox có options trong DOM.
+- Số/thanh điểm chỉ điền khi bật, có giới hạn min/max hợp lệ; không áp dụng trọng số cho loại này.
+- Giữ câu trả lời có sẵn theo mặc định; tùy chọn ghi đè, tốc độ 0–2000 ms và cuộn từng câu.
+- Tiến độ và kết quả thật, nút Dừng, báo lỗi nếu trang không nhận thao tác. Mở lại Side Panel để xem tác vụ đang chạy trong phiên trình duyệt.
+- Kiểm tra cấu trúc biểu mẫu trước khi điền; báo câu hỏi phát sinh và câu bắt buộc còn thiếu để quét lại.
+- Lưu/nạp/xóa và nhập/xuất hồ sơ JSON; xuất báo cáo JSON. Hồ sơ được ghi tuần tự trong service worker và xác nhận sau khi lưu xong.
+- Iframe cùng nguồn và Shadow DOM mở được quét. Câu hỏi đa trang xử lý từng trang bằng nút Quét.
 
 ## Cài đặt
 
-1. Tải hoặc clone repository này về máy.
-2. Mở trình duyệt và truy cập `chrome://extensions/`.
-3. Bật `Developer mode`.
-4. Chọn `Load unpacked`.
-5. Chọn thư mục chứa repository `AUTOFILL-KS-NTTU`.
-6. Ghim tiện ích `Auto Fill Khảo Sát` lên thanh công cụ để dùng nhanh hơn.
+1. Giải nén ZIP bản 2.0 được chuẩn bị trong `dist/`, hoặc clone repo.
+2. Mở `chrome://extensions` (Edge: `edge://extensions`), bật **Developer mode**.
+3. Chọn **Load unpacked** và thư mục chứa `manifest.json` — repo này hoặc thư mục ZIP đã giải nén.
+4. Ghim biểu tượng, mở trang khảo sát http/https, bấm biểu tượng để mở Side Panel.
+5. Chọn tab trợ giúp, cấu hình, **Quét & xem trước** → chỉnh riêng nếu cần → **Cập nhật đáp án** → **Điền theo xem trước**.
+6. Kiểm tra kết quả; tự bấm Gửi/Tiếp. Quét lại khi trang xuất hiện câu hỏi mới.
 
-## Sử dụng
+Yêu cầu Chrome desktop 114+ có Side Panel. Chromium/Edge/Cốc Cốc cần API tương ứng; kiểm thử tự động hiện dùng Chromium 145, chưa xác minh từng phiên bản Chrome 114 hoặc các trình duyệt khác. Không hỗ trợ Firefox/Safari/mobile.
 
-1. Mở trang khảo sát cần điền.
-2. Bấm biểu tượng tiện ích để mở Side Panel.
-3. Chọn mức độ đánh giá mong muốn.
-4. Điền các thông tin môn học nếu trang khảo sát có những trường tương ứng.
-5. Bấm `Chạy Auto Fill`.
-6. Kiểm tra lại nội dung đã điền trước khi gửi.
+Sau khi nâng cấp, reload extension trong `chrome://extensions` và tải lại các tab khảo sát đang mở để bỏ script bản cũ.
 
-## Tài liệu PDF
+## Kiểm chứng và benchmark
 
-Xem file [Hướng Dẫn Sử Dụng Extension Khảo Sát.pdf](./H%C6%B0%E1%BB%9Bng%20D%E1%BA%ABn%20S%E1%BB%AD%20D%E1%BB%A5ng%20Extension%20Kh%E1%BA%A3o%20S%C3%A1t.pdf) để có hướng dẫn cài đặt và sử dụng chi tiết.
+Chạy trên Node 22+:
 
-## Quyền riêng tư và lưu ý
+```powershell
+npm ci --ignore-scripts
+npx playwright install chromium
+npm run check
+npm run benchmark
+node tools/guide-pdf.cjs
+npm run package
+```
 
-- Tiện ích chạy trực tiếp trên trình duyệt của người dùng, không có backend và không gửi dữ liệu về máy chủ riêng.
-- Quyền `host_permissions: <all_urls>` được dùng để tiện ích có thể chạy trên nhiều trang khảo sát khác nhau.
-- Người dùng nên kiểm tra lại nội dung trước khi gửi biểu mẫu.
-- Hãy sử dụng tiện ích đúng quy định của đơn vị hoặc hệ thống khảo sát mà bạn đang truy cập.
+`check` gồm kiểm tra cú pháp/MV3, kiểm thử chính sách và storage, DOM thật trên Chromium, cài extension MV3 thật, luồng Side Panel và mẫu 1.000 câu. CI chạy lại trên Linux và tạo ZIP với SHA-256. ZIP chỉ gồm tài nguyên runtime và tài liệu, không đóng gói node_modules, mẫu test, hồ sơ local hoặc bản sao lưu.
 
-## Cấu trúc dự án
+[Phương pháp benchmark](docs/BENCHMARK.md) · [Số liệu JSON](docs/benchmark-results.json). Benchmark nội bộ so bản 1.5 và 2.0 bằng mẫu kiểm soát; không phải bảng xếp hạng đối thủ và không chứng minh tương thích 100% mọi website.
 
-- `manifest.json`: cấu hình extension Manifest V3.
-- `background.js`: thiết lập hành vi mở Side Panel.
-- `popup.html`, `popup.js`: giao diện và logic của Side Panel.
-- `content.js`: script chạy trên trang khảo sát để tìm trường nhập liệu và chọn câu trả lời.
-- `HUONG_DAN_SU_DUNG.md`, `HUONG_DAN_SU_DUNG.html`: nguồn tài liệu hướng dẫn.
-- `Hướng Dẫn Sử Dụng Extension Khảo Sát.pdf`: bản hướng dẫn PDF cho người dùng cuối.
+## Phạm vi tương thích
+
+Ba tab trợ giúp dùng chung engine dựa trên HTML/ARIA. Mẫu Google/MS trong test là mô phỏng cấu trúc, **chưa xác minh trên khảo sát thật có đăng nhập**. Website có widget riêng, dropdown tạo options sau khi mở, canvas, closed Shadow DOM, iframe khác nguồn, câu kéo thả/xếp hạng, tải file hoặc CAPTCHA cần xử lý thủ công. Tiện ích không tự chuyển trang hoặc gửi phiếu.
+
+Nếu không thấy dropdown, mở danh sách rồi quét lại. Nếu iframe khác nguồn, mở URL khảo sát trong tab riêng. Nếu tab đã đổi hoặc trang không phản hồi, bấm lại biểu tượng tiện ích rồi quét lại.
+
+## Tài liệu
+
+- [Hướng dẫn](HUONG_DAN_SU_DUNG.md), [HTML](HUONG_DAN_SU_DUNG.html), [PDF](Hướng%20Dẫn%20Sử%20Dụng%20Extension%20Khảo%20Sát.pdf).
+- [Quyền riêng tư](PRIVACY.md) và [lịch sử thay đổi](CHANGELOG.md).
+- `shared.js`: chính sách lựa chọn/kiểm tra dữ liệu; `content.js`: quét, lập kế hoạch và điền.
+- `popup.html`, `popup.css`, `popup.js`: Side Panel; `background.js`: mở bảng và lưu hồ sơ.
+- `tests/`, `tools/`: kiểm thử, benchmark, PDF, đóng gói.
+
+Không có backend hoặc telemetry; [MIT](LICENSE). Sử dụng theo quy định của đơn vị khảo sát.

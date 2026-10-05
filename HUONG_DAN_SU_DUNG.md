@@ -1,101 +1,72 @@
-# Hướng Dẫn Cài Đặt Và Sử Dụng AUTOFILL-KS-NTTU
+# Hướng dẫn AutoFill KS NTTU 2.0
 
-AUTOFILL-KS-NTTU là tiện ích Chromium hỗ trợ điền nhanh phiếu đánh giá môn học/khảo sát. Tiện ích dùng **Side Panel** để bảng điều khiển luôn nằm bên cạnh trang khảo sát, giúp bạn thao tác trên trang web mà không làm mất giao diện điều khiển.
+## Cài đặt và nâng cấp
 
-> Lưu ý: Tiện ích chỉ hỗ trợ điền biểu mẫu trên trình duyệt của bạn. Hãy kiểm tra lại nội dung trước khi gửi và sử dụng đúng quy định của hệ thống khảo sát.
+Giải nén gói ZIP hoặc clone repository. Vào `chrome://extensions`, bật Developer mode, chọn Load unpacked và thư mục chứa manifest.json. Ghim biểu tượng rồi mở trang khảo sát http/https. Để nâng cấp, reload extension và tải lại các tab khảo sát đang mở.
 
-## 1. Yêu Cầu Trước Khi Cài Đặt
+Chrome desktop 114+ có Side Panel là mục tiêu hỗ trợ; kiểm thử hiện thực hiện trên Chromium 145. Trình duyệt Chromium khác cần API tương ứng.
 
-- Chrome, Microsoft Edge hoặc trình duyệt Chromium có hỗ trợ Manifest V3 và Side Panel.
-- Khuyến nghị Chrome 114 trở lên.
-- Mã nguồn tiện ích đã được tải hoặc clone về máy.
+## Ba tab trợ giúp
 
-## 2. Cài Đặt Extension
+| Tab | Tình huống |
+| --- | --- |
+| NTTU / HTML | Đánh giá môn học, radio HTML, ma trận, dropdown và thông tin sinh viên/môn học |
+| Google Forms | Nhóm radio/checkbox ARIA, thang tuyến tính, lưới và văn bản |
+| Microsoft Forms | Nhóm HTML/ARIA, Likert, văn bản và điểm có giới hạn |
 
-1. Giải nén hoặc clone repository `AUTOFILL-KS-NTTU`.
-2. Mở trình duyệt Chrome/Edge/Cốc Cốc.
-3. Truy cập trang quản lý tiện ích:
-   - Chrome/Cốc Cốc: `chrome://extensions/`
-   - Edge: `edge://extensions/`
-4. Bật **Developer mode** hoặc **Chế độ dành cho nhà phát triển**.
-5. Chọn **Load unpacked** hoặc **Tải tiện ích đã giải nén**.
-6. Chọn thư mục chứa các file `manifest.json`, `popup.html`, `content.js` của dự án.
-7. Kiểm tra tiện ích **Auto Fill Khảo Sát** đã xuất hiện trong danh sách.
+Các tab dùng chung cấu hình và engine; chuyển tab trợ giúp giữ thông tin đã nhập. Mẫu Google/MS hiện là mô phỏng kiểm thử; không bảo đảm mọi widget của nền tảng.
 
-Nếu đã cài bản cũ, hãy bấm nút **Reload** trên thẻ tiện ích để cập nhật mã mới.
+## Cấu hình đáp án
 
-## 3. Ghim Extension Lên Thanh Công Cụ
+**Cố định theo mức:** chọn thấp nhất, 25%, giữa thang, 75% hoặc cao nhất. Nhãn đồng ý/hài lòng quen thuộc nhận diện theo ý nghĩa cả khi thứ tự đảo ngược. Nhãn khác dùng vị trí hiển thị. Với thang không có vị trí chính xác, chọn mức gần nhất.
 
-1. Bấm biểu tượng tiện ích của trình duyệt.
-2. Tìm **Auto Fill Khảo Sát**.
-3. Bấm biểu tượng ghim để đưa tiện ích lên thanh công cụ.
+**Cố định theo vị trí:** đáp án khả dụng đầu là 1. Vị trí vượt số đáp án sẽ bỏ qua, không tự chọn đáp án khác.
 
-Sau khi ghim, bạn có thể mở Side Panel nhanh bằng cách bấm biểu tượng tiện ích.
+**Cố định theo nhãn:** so khớp nhãn hoặc value sau khi chuẩn hóa chữ hoa/dấu tiếng Việt. Không khớp, hoặc khớp nhiều đáp án, sẽ bỏ qua.
 
-## 4. Mở Bảng Điều Khiển Side Panel
+**Ngẫu nhiên đều:** nhập khoảng mức 0–100%. Chỉ các đáp án trong khoảng được chọn; khoảng không chứa đáp án sẽ bỏ qua. Seed tùy chọn giúp lặp lại lựa chọn trên cùng cấu trúc. Đáp án xem trước được giữ khi điền; thay đổi câu khác không làm lệch ngẫu nhiên.
 
-1. Mở trang khảo sát cần điền.
-2. Bấm biểu tượng **Auto Fill Khảo Sát** trên thanh công cụ.
-3. Bảng điều khiển sẽ mở ở cạnh bên trình duyệt.
+**Ngẫu nhiên trọng số:** nhập 5 số không âm (tối đa 1000) theo thứ tự mức 0/25/50/75/100%. Ví dụ `0, 0, 1, 3, 6` ưu tiên các mức cao. Mức không thuộc nhóm trọng số cố định được gán về nhóm gần nhất. Ít nhất một số phải lớn hơn 0.
 
-Side Panel có thể giữ nguyên khi bạn click, cuộn hoặc thao tác trên trang khảo sát.
+**Checkbox/select nhiều:** nhập số tối thiểu/tối đa. Số lựa chọn nằm trong khoảng này. Chọn ngẫu nhiên không trùng; cố định chọn từ đáp án ưu tiên, nối tiếp theo thứ tự và quay vòng. Nếu không đủ đáp án phù hợp số tối thiểu sẽ bỏ qua.
 
-## 5. Cách Sử Dụng
+**Văn bản:** để trống, dùng dòng mẫu đầu tiên hoặc lấy ngẫu nhiên một dòng. Không điền mẫu góp ý vào trường cá nhân/môn học còn thiếu. Nhập các trường đó trong phần Thông tin, hoặc đặt đáp án riêng từng câu.
 
-1. Trong Side Panel, chọn **Tùy chọn mức độ đánh giá**.
-2. Điền các thông tin nếu trang khảo sát có trường tương ứng:
-   - Tên môn học
-   - Giảng viên
-   - Mã môn học
-   - Khoa
-   - Học kỳ
-   - Năm học
-3. Bấm **Chạy Auto Fill**.
-4. Tiện ích sẽ:
-   - Tìm các ô nhập liệu dựa trên nhãn gần đó.
-   - Nhập từng ký tự vào các ô tìm thấy.
-   - Tìm nhóm câu hỏi trắc nghiệm và chọn đáp án theo mức đánh giá đã chọn.
-   - Điền `ok` vào các ô góp ý còn trống.
-5. Khi hoàn tất, tiện ích sẽ báo để bạn kiểm tra lại.
-6. Nếu trang có nút gửi với id `btnGui`, tiện ích sẽ hỏi xác nhận trước khi bấm gửi.
+**Số/thanh điểm:** bật điền số nếu muốn. Chỉ sử dụng ô có min/max/step hợp lệ (range dùng mặc định HTML 0–100). Hỗ trợ mức cố định hoặc ngẫu nhiên; trọng số cần nhập riêng.
 
-## 6. Các Mức Đánh Giá Được Hỗ Trợ
+## Quy trình xem trước → điền
 
-- Hoàn toàn đồng ý / Rất hài lòng
-- Đồng ý / Hài lòng
-- Phân vân / Bình thường
-- Không đồng ý / Không hài lòng
-- Hoàn toàn không đồng ý / Rất không hài lòng
+1. Mở trang khảo sát, bấm biểu tượng tiện ích, chọn tab trợ giúp và cấu hình.
+2. Nhập thông tin cá nhân/môn học nếu cần. Để trống trường không dùng.
+3. Bấm **Quét & xem trước**. Kiểm tra số câu, đáp án sẽ điền và lý do bỏ qua.
+4. Mỗi câu có thể chọn Theo cấu hình chung, Bỏ qua hoặc Chọn/nhập riêng. Với nhiều đáp án, giữ Ctrl/Cmd khi chọn. Ngày tháng dùng định dạng của ô (ví dụ `2026-10-05`).
+5. Bấm **Cập nhật đáp án** khi sửa lựa chọn riêng. Thay cấu hình chung thì Quét lại.
+6. Bấm **Điền theo xem trước**. Tiến độ thật hiển thị số câu đã xử lý; lỗi không được tính là điền thành công.
+7. Dùng **Dừng** để dừng sau thao tác đang thực hiện; các câu đã điền được giữ nguyên. Mở lại Side Panel trong cùng phiên để theo dõi tác vụ đang chạy.
+8. Kiểm tra kết quả, các câu bắt buộc còn thiếu, rồi tự bấm Gửi/Tiếp. Quét lại trang kế tiếp hoặc câu hỏi mới xuất hiện.
 
-## 7. Xử Lý Lỗi Thường Gặp
+Mặc định giữ câu có sẵn; bật Ghi đè nếu muốn thay thế. Tác vụ không tự chạy lại sau khi trang tải lại. Thông tin thay đổi trong khi đang điền có thể cần quét lại.
 
-### Không mở được Side Panel
+## Hồ sơ và báo cáo
 
-- Kiểm tra trình duyệt có hỗ trợ Side Panel hay không.
-- Cập nhật trình duyệt lên phiên bản mới.
-- Vào trang quản lý tiện ích và bấm **Reload**.
+Nhập tên rồi bấm Lưu để lưu cấu hình và thông tin tại trình duyệt (tối đa 30 hồ sơ). Chọn hồ sơ rồi Nạp hoặc Xóa. Lưu cùng tên cập nhật hồ sơ đó. Cấu hình lần quét được nhớ, nhưng thông tin cá nhân chỉ lưu khi bấm Lưu hồ sơ.
 
-### Bấm chạy nhưng không điền được
+Xuất/nhập JSON để chuyển hồ sơ; hồ sơ nhập chưa được lưu cho tới khi bấm Lưu. File nhập tối đa 100 KB, định dạng schemaVersion 1. Xuất báo cáo sau tác vụ để kiểm tra câu đã điền/bỏ qua/lỗi. File JSON có thể chứa thông tin cá nhân và đáp án; lưu ở nơi phù hợp.
 
-- Đảm bảo bạn đang mở trang web dạng `http://` hoặc `https://`.
-- Không chạy trên trang quản lý nội bộ của trình duyệt như `chrome://extensions/`.
-- Kiểm tra trang khảo sát có cấu trúc nhãn và ô nhập liệu rõ ràng.
-- Tải lại trang khảo sát rồi chạy lại.
+## Khi gặp vấn đề
 
-### Chọn sai hoặc thiếu một số câu hỏi
+| Tình trạng | Cách xử lý |
+| --- | --- |
+| Không thấy câu hỏi | Đợi tải xong, Quét lại; mở khảo sát trong tab riêng nếu nhúng iframe khác nguồn |
+| Dropdown không thấy đáp án | Mở danh sách trên trang rồi Quét lại; dropdown chỉ hỗ trợ options đã có trong DOM |
+| Biểu mẫu đã thay đổi | Quét lại trước khi điền; không dùng bản xem trước cũ |
+| Không phản hồi / thiếu quyền tab | Bấm lại biểu tượng tiện ích trên tab khảo sát rồi Quét lại |
+| Câu đã có đáp án bị bỏ qua | Bật Ghi đè nếu bạn muốn thay câu trả lời |
+| Văn bản vượt giới hạn / giá trị sai | Sửa đáp án riêng cho đúng ràng buộc của ô; giá trị không hợp lệ được báo lỗi |
+| Trang không nhận click | Xem lỗi, chọn thủ công; không ép trạng thái checked giả |
 
-- Một số trang khảo sát dùng cấu trúc HTML riêng, tên lớp khác hoặc nội dung đáp án khác.
-- Hãy kiểm tra lại toàn bộ nội dung trước khi gửi.
+Không hỗ trợ mọi widget riêng, canvas, iframe khác nguồn, Shadow DOM đóng, câu kéo thả/xếp hạng, CAPTCHA hoặc tải file. Extension không tự gửi khảo sát và không gửi dữ liệu tới backend riêng.
 
-## 8. Quyền Riêng Tư
+## Kiểm chứng
 
-- Tiện ích chạy trực tiếp trong trình duyệt.
-- Không có máy chủ riêng.
-- Không gửi dữ liệu người dùng về backend của dự án.
-- Quyền truy cập `<all_urls>` được dùng để tiện ích có thể chạy trên nhiều trang khảo sát khác nhau.
-
-## 9. Gỡ Cài Đặt
-
-1. Mở `chrome://extensions/` hoặc `edge://extensions/`.
-2. Tìm **Auto Fill Khảo Sát**.
-3. Bấm **Remove** hoặc **Gỡ bỏ**.
+Xem `docs/BENCHMARK.md` và `docs/benchmark-results.json` để biết mẫu, phiên bản, kết quả, thời gian và giới hạn. 100% mẫu nội bộ không đồng nghĩa 100% mọi website. Xem `PRIVACY.md` cho chi tiết lưu dữ liệu và quyền truy cập.

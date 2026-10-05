@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-05T07:22:30.220Z",
+  "browser": "145.0.7632.6",
+  "node": "v24.16.0",
+  "os": "win32 10.0.26300 x64",
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12450HX",
+  "baselineCommit": "8ed9f0411858a3e907c0508d17bb5173ef212158",
+  "baselineSha256": "3c9304203c22095c94750cbb6c2abb7a8e79a093b3cff5dd59f2cc0413a1f53c",
+  "engineSha256": "d284c4627612f4717e29bfddd421b6aed27098fb1d48f10a3407a57c4d5b98d5",
+  "policySha256": "6a824e34d963edb99b9a5e3078639ff7b684db009055dfd074e5609dc9ab1528",
+  "scope": "Synthetic fixtures with expected DOM values. No live NTTU/Google/MS pages, network, CAPTCHA, closed shadow roots or cross-origin frames.",
+  "timingScope": "Page-side elapsed time to actual completion. New version includes scan/preview + fill; old version includes its intentional human-like delays. Excludes browser startup and script injection; not a CPU optimization measurement.",
+  "correctness": [
+    {
+      "case": "nttu-3",
+      "expected": "3",
+      "baselineValue": "3",
+      "baselinePass": true,
+      "currentValue": "3",
+      "currentPass": true
+    },
+    {
+      "case": "nttu-5",
+      "expected": "5",
+      "baselineValue": "5",
+      "baselinePass": true,
+      "currentValue": "5",
+      "currentPass": true
+    },
+    {
+      "case": "nttu-7",
+      "expected": "7",
+      "baselineValue": "7",
+      "baselinePass": true,
+      "currentValue": "7",
+      "currentPass": true
+    },
+    {
+      "case": "html-radio-2",
+      "expected": "2",
+      "baselineValue": "",
+      "baselinePass": false,
+      "currentValue": "2",
+      "currentPass": true
+    },
+    {
+      "case": "html-radio-3",
+      "expected": "3",
+      "baselineValue": "",
+      "baselinePass": false,
+      "currentValue": "3",
+      "currentPass": true
+    },
+    {
+      "case": "html-radio-5",
+      "expected": "5",
+      "baselineValue": "",
+      "baselinePass": false,
+      "currentValue": "5",
+      "currentPass": true
+    },
+    {
+      "case": "html-radio-7",
+      "expected": "7",
+      "baselineValue": "",
+      "baselinePass": false,
+      "currentValue": "7",
+      "currentPass": true
+    },
+    {
+      "case": "html-radio-10",
+      "expected": "10",
+      "baselineValue": "",
+      "baselinePass": false,
+      "currentValue": "10",
+      "currentPass": true
+    },
+    {
+      "case": "google-aria-7",
+      "expected": "7",
+      "baselineValue": "",
+      "baselinePass": false,
+      "currentValue": "7",
+      "currentPass": true
+    },
+    {
+      "case": "microsoft-aria-2",
+      "expected": "2",
+      "baselineValue": "",
+      "baselinePass": false,
+      "currentValue": "2",
+      "currentPass": true
+    },
+    {
+      "case": "checkbox",
+      "expected": "2",
+      "baselineValue": "",
+      "baselinePass": false,
+      "currentValue": "2",
+      "currentPass": true
+    },
+    {
+      "case": "select",
+      "expected": "2",
+      "baselineValue": "",
+      "baselinePass": false,
+      "currentValue": "2",
+      "currentPass": true
+    },
+    {
+      "case": "bounded-number",
+      "expected": "10",
+      "baselineValue": "",
+      "baselinePass": false,
+      "currentValue": "10",
+      "currentPass": true
+    },
+    {
+      "case": "explicit-comment",
+      "expected": "ok",
+      "baselineValue": "ok",
+      "baselinePass": true,
+      "currentValue": "ok",
+      "currentPass": true
+    }
+  ],
+  "timing": {
+    "questions": 10,
+    "iterations": 5,
+    "warmups": 1,
+    "baseline": {
+      "medianMs": 3195.699999999255,
+      "p95Ms": 3393.2000000029802,
+      "samples": [
+        3311.5,
+        3393.2000000029802,
+        3195.699999999255,
+        3148.900000002235,
+        3030.5
+      ]
+    },
+    "current": {
+      "medianMs": 30.199999999254942,
+      "p95Ms": 31.299999997019768,
+      "samples": [
+        29.199999999254942,
+        31.299999997019768,
+        31.099999997764826,
+        30.199999999254942,
+        27.600000001490116
+      ]
+    },
+    "medianSpeedup": 105.81788079728793
+  },
+  "correctnessTotals": {
+    "total": 14,
+    "baselinePassed": 4,
+    "currentPassed": 14
+  }
+}
